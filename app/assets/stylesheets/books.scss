@@ -3,3 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+h4{
+    font-size:0.8em;
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+.create{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.font{
+    margin-top:10px;
+}

@@ -31,30 +31,28 @@ class BooksController < ApplicationController
   def destroy
     book = Book.find(params[:id])
     book.destroy
+    flash[:notice] = "Book was successfully destroyed."
     redirect_to books_path
+
   end
 
-  def create
 
+  def create
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
     else
       @books = Book.all
-      # @book = Book.new
+
       render :index
-      # redirect_to books_path
+
     end
-
-
   end
-
-
 
   private
-  def book_params
-    params.require(:book).permit(:title, :body)
-  end
+    def book_params
+     params.require(:book).permit(:title, :body)
+    end
 
 end

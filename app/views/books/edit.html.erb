@@ -1,3 +1,5 @@
+
+
 <h1>Editing Book</h1>
 <% if @book.errors.any? %>
   <div>2 error prohibited this book from being saved:</div>
@@ -12,11 +14,13 @@
 
 
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
-  <h4>Title</h4>
+  <div class= "font">Title</div>
   <%= f.text_field :title %>
-  <h4>Body</h4>
+  <div class= "font">Body</div>
   <%= f.text_area :body %>
+  <div class = "create">
   <%= f.submit 'Update Book' %>
+  </div>
 
   <%= link_to "Show", book_path(@book) %>
   |
